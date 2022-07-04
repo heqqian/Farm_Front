@@ -15,31 +15,14 @@
   </view>
       
   <scroll-view class="store-list" scroll-y>
-    <view class="store-box">
+    <view wx:for="{{ farmList }}" wx:key="index" class="store-box">
       <view class="info-area">
-        <view class="name">秋名山农场</view>
-        <view class="info">噜噜噜路999号</view>
-        <view class="info">营业时间：06:00 ~ 23:00</view>
-        <view class="tag">营业中</view>
+        <view class="name">{{ item.name }}</view>
+        <view class="info">{{ item.address }}</view>
+        <view class="info">营业时间：{{ item.opening_time }}</view>
+        <view class="tag">{{ dict[item.status] }}</view>
       </view>
 
-      <view class="location-area">
-        <view class="distance">距离1.3km</view>
-        <view class="action-area">
-          <image src="../../images/map/bl.png"></image>
-          <image src="../../images/map/talk.png"></image>
-        </view>
-      </view>
-    </view>
-
-    <view class="store-box">
-      <view class="info-area">
-        <view class="name">七里香农场</view>
-        <view class="info">咕咕咕路777号</view>
-        <view class="info">营业时间：07:00 ~ 24:00</view>
-        <view class="tag">营业中</view>
-      </view>
-      
       <view class="location-area">
         <view class="distance">距离1.3km</view>
         <view class="action-area">

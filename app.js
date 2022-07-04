@@ -2,6 +2,7 @@
 var http = require("utils/http.js");
 App({
   onLaunch: function () {
+    wx.cloud.init();
     // http.getToken();
     // wx.getSetting({
     //   success(res) {

@@ -1,4 +1,8 @@
 // pages/farm/farm.js
+import farmApi from "../../api/farm"
+// 引入SDK核心类，js文件根据自己业务，位置可自行放置
+const QQMapWX = require('../../utils/qqmap-wx-jssdk.min.js');
+
 Page({
 
   /**
@@ -16,14 +20,72 @@ Page({
       {id: 6, title: '西元前农场', latitude: 27.708482, longitude: 113.145435, iconPath: '../../images/map/farm.png', width: '55rpx', height: '69rpx'},
       {id: 7, title: '晴天农场', latitude: 27.708482, longitude: 113.145435, iconPath: '../../images/map/farm.png', width: '55rpx', height: '69rpx'},
       {id: 8, title: '断弦农场', latitude: 27.708482, longitude: 113.145435, iconPath: '../../images/map/farm.png', width: '55rpx', height: '69rpx'},
-    ]
+    ],
+
+    farmList: [],
+    dict: {
+      'OPENING': '营业中',
+      'CLOSED': '已关门'
+    }
   },
 
   mapContext: null,
+  mapSdk: null,
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    this.initMapSdk()
+    this.loadCurrentLocation()
+    this.initMapContext()
+    this.fetchFarmList()
+  },
+  initMapSdk() {
+    this.mapSdk = new QQMapWX({key: 'E57BZ-OOY3W-ZLZR3-OWD7S-CYKEK-BRB6E'})
+  },
+
+  //获取农场列表
+  fetchFarmList() {
+    farmApi.list().then(res=>{
+      const farmList = makeFarmList(res.data)
+
+     
+      this.setData({
+        farmList
+      })
+    })
+  },
+
+  makeFarmList(data) {
+    let farmList = data;
+    
+    const locationList = data.map(item=>{
+      return {
+        latitude: item.latitude,
+        lobgitute: item.longitude,
+      }
+    })
+
+    this.mapSdk.calculateDistance({
+      from: '',
+      to: locationList,
+      success: (res) => {
+        
+      } 
+    })
+
+    return farmList
+
+  },
+
+
+  initMapContext() {
+    wx.createSelectorQuery().select('#store-map').context((res) => {
+      this.mapContext = res.context
+     }).exec()
+  },
+
+  loadCurrentLocation() {
     wx.getLocation({
       isHighAccuracy: true,
       type: 'wgs84',
@@ -36,10 +98,6 @@ Page({
         })
       }
      })
-
-     wx.createSelectorQuery().select('#store-map').context((res) => {
-      this.mapContext = res.context
-     }).exec()
   },
 
   goToCurrentLocation() {
