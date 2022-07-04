@@ -3,6 +3,7 @@
         "pages/index/index",
         "pages/logs/logs",
         "pages/user/user",
+        "pages/farm/farm",
         "pages/basket/basket",
         "pages/category/category",
         "pages/search-page/search-page",
@@ -28,7 +29,7 @@
         "navigationBarTextStyle": "black"
     },
     "tabBar": {
-        "selectedColor": "#3a86b9",
+        "selectedColor": "#2f5e2a",
         "color": "#b8b8b8",
         "list": [
             {
@@ -38,8 +39,14 @@
                 "selectedIconPath": "images/tabbar/home-sel.png"
             },
             {
+              "pagePath": "pages/farm/farm",
+              "text": "农场",
+              "iconPath": "images/tabbar/farm.png",
+              "selectedIconPath": "images/tabbar/farm-sel.png"
+          },
+            {
                 "pagePath": "pages/category/category",
-                "text": "分类",
+                "text": "农产品分类",
                 "iconPath": "images/tabbar/category.png",
                 "selectedIconPath": "images/tabbar/category-sel.png"
             },
@@ -52,8 +59,8 @@
             {
                 "pagePath": "pages/user/user",
                 "text": "我的",
-                "iconPath": "images/tabbar/user.png",
-                "selectedIconPath": "images/tabbar/user-sel.png"
+                "iconPath": "images/tabbar/mine.png",
+                "selectedIconPath": "images/tabbar/mine-sel.png"
             }
         ]
     },

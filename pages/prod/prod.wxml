@@ -99,7 +99,7 @@
   <!-- 底部按钮 -->
   <view class="cart-footer {{findSku?'':'gray'}}">
     <view class="btn icon" bindtap='toHomePage'>
-      <image src="../../images/tabbar/homepage.png"></image>
+      <image src="../../images/tabbar/home.png"></image>
       首页
     </view>
     <view class="btn icon" bindtap='toCartPage'>
