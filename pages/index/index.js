@@ -79,6 +79,13 @@ Page({
     })
   },
 
+  //跳转商品分类页面
+  toCategoryPage:function(){
+    wx.navigateTo({
+      url: '/pages/category/category',
+    })
+  },
+
   //跳转公告列表页面
   onNewsPage: function() {
     wx.navigateTo({
