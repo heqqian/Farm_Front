@@ -1,0 +1,24 @@
+<!--pages/farm/farm.wxml-->
+
+<!--高德地图容器-->
+<view class="map_container">
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" 
+  scale="16" markers="{{markers}}"></map>  
+</view>
+<view class="map_text">
+    <text class="h1">{{textData.name}}</text>
+    <view></view>
+    <text>{{textData.desc}}</text>
+</view>
+
+<!--搜索框-->
+<van-search
+  value="{{ value }}"
+  placeholder="搜索农场"
+  bind:search="onSearch"
+  shape="round"
+  background="#8ab186"
+  style="position:absolute;bottom:10rpx;width:100%;height:150rpx"
+/>
+
+
