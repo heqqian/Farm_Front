@@ -21,7 +21,8 @@
         "pages/prod-classify/prod-classify",
         "pages/recent-news/recent-news",
         "pages/news-detail/news-detail",
-        "pages/farm_s/farm_s"
+        "pages/farm_s/farm_s",
+        "pages/chat/chat"
     ],
     "permission": {
       "scope.userLocation": {
@@ -52,18 +53,18 @@
               "text": "农场",
               "iconPath": "images/tabbar/farm.png",
               "selectedIconPath": "images/tabbar/farm-sel.png"
-          },
-            {
-                "pagePath": "pages/category/category",
-                "text": "农产品分类",
-                "iconPath": "images/tabbar/category.png",
-                "selectedIconPath": "images/tabbar/category-sel.png"
             },
             {
                 "pagePath": "pages/basket/basket",
                 "text": "购物车",
                 "iconPath": "images/tabbar/basket.png",
                 "selectedIconPath": "images/tabbar/basket-sel.png"
+            },
+            {
+              "pagePath": "pages/chat/chat",
+              "text": "消息",
+              "iconPath": "images/tabbar/chat.png",
+              "selectedIconPath": "images/tabbar/chat-sel.png"
             },
             {
                 "pagePath": "pages/user/user",
