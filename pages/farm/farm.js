@@ -28,7 +28,7 @@ Page({
       'CLOSED': '已关门'
     }
   },
-
+  collapse: false,
   mapContext: null,
   mapSdk: null,
   /**
@@ -76,6 +76,22 @@ Page({
 
   // },
 
+
+  //导航功能（去这里）
+  navigateLocation(e) {
+    const latitude = e.currentTarget.dataset.latitude
+    const longitude = e.currentTarget.dataset.longitude
+    wx.openLocation({
+      latitude,
+      longitude
+    })
+  },
+
+  collapse() {
+    this.setData({
+      collapse: !this.data.collapse
+    })
+  },
 
   initMapContext() {
     wx.createSelectorQuery().select('#store-map').context((res) => {

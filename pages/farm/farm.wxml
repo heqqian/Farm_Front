@@ -6,15 +6,15 @@
 
   <map
   id="store-map"
-  class="store-map" latitude="{{ latitude }}" longitude="{{ longitude }}" show-location markers="{{ markers }}">
+  class="store-map" style="height: {{ collapse ? '0' : '450rpx' }};" latitude="{{ latitude }}" longitude="{{ longitude }}" show-location markers="{{ markers }}">
   <image class="current-icon" src="../../images/map/origin.png" bindtap="goToCurrentLocation"></image>
   </map>
   
-  <view class="collapse-area">
-    收起地图
+  <view class="collapse-area" bindtap="collapse">
+  {{ collapse ? '展开地图' : '收起地图' }}
   </view>
       
-  <scroll-view class="store-list" scroll-y>
+  <scroll-view class="store-list" scroll-y >
     <view wx:for="{{ farmList }}" wx:key="index" class="store-box">
       <view class="info-area">
         <view class="name">{{ item.name }}</view>
@@ -26,8 +26,8 @@
       <view class="location-area">
         <view class="distance">距离{{ item.distance }}km</view>
         <view class="action-area">
-          <image src="../../images/map/bl.png"></image>
-          <image src="../../images/map/talk.png"></image>
+          <image class="location" bindtap="navigateLocation" data-latitude="{{ item.latitude }}" data-longitude="{{ item.longitude }}" src="../../images/map/bl.png"></image>
+          <image class="talk" src="../../images/map/talk.png"></image>
         </view>
       </view>
     </view>

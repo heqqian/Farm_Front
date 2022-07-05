@@ -36,6 +36,11 @@ Component({
       })
       this.calculateLinePositionX()
     },
+    toMine() {
+      wx.navigateTo({
+        url: '/pages/farm-m/farm-m',
+      })
+    },
     calculateLinePositionX(index = 0) {
       this.createSelectorQuery().selectAll('.tab').boundingClientRect(results=>{
         const rect = results[index]

@@ -31,8 +31,8 @@ Page({
     var key = config.Config.key;
     var myAmapFun = new amapFile.AMapWX({ key: key });
     myAmapFun.getRegeo({
-      iconPath: "../../images/icon/dot.png",
-      iconWidth: 22,
+      iconPath: "../../images/icon/delive-dot.png",
+      iconWidth: 32,
       iconHeight: 32,
       success: function (data) {
         console.log(data);
