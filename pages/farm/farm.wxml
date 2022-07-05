@@ -1,7 +1,7 @@
 <view class="page">
   <view class="header">
     <tabs tabs="{{ [{value: 'nearby', label:'附近农场'}, {value:'mine', label:'我的农场'}] }}"></tabs>
-    <input class="search" placeholder="搜索农场" type="text" />
+    <input class="search" placeholder="搜索农场" type="text" bindtap="goToFarmSearch" />
   </view>
 
   <map
@@ -24,7 +24,7 @@
       </view>
 
       <view class="location-area">
-        <view class="distance">距离1.3km</view>
+        <view class="distance">距离{{ item.distance }}km</view>
         <view class="action-area">
           <image src="../../images/map/bl.png"></image>
           <image src="../../images/map/talk.png"></image>

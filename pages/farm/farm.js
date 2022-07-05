@@ -47,36 +47,34 @@ Page({
   //获取农场列表
   fetchFarmList() {
     farmApi.list().then(res=>{
-      const farmList = makeFarmList(res.data)
-
-     
+      // const farmList = makeFarmList(res.data)
       this.setData({
-        farmList
+        farmList: res.data
       })
     })
   },
 
-  makeFarmList(data) {
-    let farmList = data;
+  // makeFarmList(data) {
+  //   let farmList = data;
     
-    const locationList = data.map(item=>{
-      return {
-        latitude: item.latitude,
-        lobgitute: item.longitude,
-      }
-    })
+  //   const locationList = data.map(item=>{
+  //     return {
+  //       latitude: item.latitude,
+  //       lobgitute: item.longitude,
+  //     }
+  //   })
 
-    this.mapSdk.calculateDistance({
-      from: '',
-      to: locationList,
-      success: (res) => {
+  //   this.mapSdk.calculateDistance({
+  //     from: '',
+  //     to: locationList,
+  //     success: (res) => {
         
-      } 
-    })
+  //     } 
+  //   })
 
-    return farmList
+  //   return farmList
 
-  },
+  // },
 
 
   initMapContext() {
@@ -102,6 +100,12 @@ Page({
 
   goToCurrentLocation() {
     this.mapContext.moveToLocation()
+  },
+
+  goToFarmSearch() {
+    wx.navigateTo({
+      url: '/pages/farm_s/farm_s',
+    })
   },
 
   /**

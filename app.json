@@ -4,8 +4,8 @@
         "pages/logs/logs",
         "pages/user/user",
         "pages/farm/farm",
-        "pages/basket/basket",
         "pages/category/category",
+        "pages/basket/basket",
         "pages/search-page/search-page",
         "pages/delivery-address/delivery-address",
         "pages/editAddress/editAddress",
@@ -20,8 +20,17 @@
         "pages/login/login",
         "pages/prod-classify/prod-classify",
         "pages/recent-news/recent-news",
-        "pages/news-detail/news-detail"
+        "pages/news-detail/news-detail",
+        "pages/farm_s/farm_s"
     ],
+    "permission": {
+      "scope.userLocation": {
+        "desc": "您的位置信息将用于为您匹配附近农场"
+      }
+    },
+    "usingComponents": {
+      "van-search": "@vant/weapp/search/index"
+    },
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
