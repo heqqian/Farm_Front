@@ -2,5 +2,6 @@
   "backgroundTextStyle": "dark",
   "navigationBarTextStyle": "black",
   "enablePullDownRefresh": true,
-  "navigationBarTitleText": "mall4j"
+  "navigationBarTitleText": "首页",
+  "navigationBarBackgroundColor": "#fff"
 }

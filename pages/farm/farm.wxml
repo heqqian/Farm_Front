@@ -6,7 +6,7 @@
 
   <map
   id="store-map"
-  class="store-map" style="height: {{ collapse ? '0' : '450rpx' }};" latitude="{{ latitude }}" longitude="{{ longitude }}" show-location markers="{{ markers }}">
+  class="store-map" style="height: {{ collapse ? '0' : '520rpx' }};" latitude="{{ latitude }}" longitude="{{ longitude }}" show-location markers="{{ markers }}">
   <image class="current-icon" src="../../images/map/origin.png" bindtap="goToCurrentLocation"></image>
   </map>
   
@@ -14,7 +14,7 @@
   {{ collapse ? '展开地图' : '收起地图' }}
   </view>
       
-  <scroll-view class="store-list" scroll-y >
+  <scroll-view class="store-list" style="height:calc(100vh - {{mapShow? 700 : 180}}rpx)" scroll-y >
     <view wx:for="{{ farmList }}" wx:key="index" class="store-box">
       <view class="info-area">
         <view class="name">{{ item.name }}</view>

@@ -2,7 +2,8 @@
 import farmApi from "../../api/farm"
 // 引入SDK核心类，js文件根据自己业务，位置可自行放置
 const QQMapWX = require('../../utils/qqmap-wx-jssdk.min.js');
-
+const key = 'E57BZ-OOY3W-ZLZR3-OWD7S-CYKEK-BRB6E'
+const chooseLocation = requirePlugin('chooseLocation');
 Page({
 
   /**
@@ -31,6 +32,7 @@ Page({
   collapse: false,
   mapContext: null,
   mapSdk: null,
+  // mapKey: key,
   /**
    * 生命周期函数--监听页面加载
    */
@@ -41,7 +43,7 @@ Page({
     this.fetchFarmList()
   },
   initMapSdk() {
-    this.mapSdk = new QQMapWX({key: 'E57BZ-OOY3W-ZLZR3-OWD7S-CYKEK-BRB6E'})
+    this.mapSdk = new QQMapWX({key})
   },
 
   //获取农场列表
@@ -53,29 +55,6 @@ Page({
       })
     })
   },
-
-  // makeFarmList(data) {
-  //   let farmList = data;
-    
-  //   const locationList = data.map(item=>{
-  //     return {
-  //       latitude: item.latitude,
-  //       lobgitute: item.longitude,
-  //     }
-  //   })
-
-  //   this.mapSdk.calculateDistance({
-  //     from: '',
-  //     to: locationList,
-  //     success: (res) => {
-        
-  //     } 
-  //   })
-
-  //   return farmList
-
-  // },
-
 
   //导航功能（去这里）
   navigateLocation(e) {
@@ -118,10 +97,22 @@ Page({
     this.mapContext.moveToLocation()
   },
 
+  //搜索农场
   goToFarmSearch() {
+    // wx.navigateTo({
+    //   url: '/pages/farm_s/farm_s',
+    // })
+    // const key = this.data.mapKey
+    console.log(key)
+    const referer = 'mall4m-master'; //调用插件的app的名称
+    const location = JSON.stringify({
+      latitude: this.data.latitude,
+      longitude: this.data.longitude
+    });
+       
     wx.navigateTo({
-      url: '/pages/farm_s/farm_s',
-    })
+      url: 'plugin://chooseLocation/index?key=' + key + '&referer=' + referer + '&location=' + location
+    });    
   },
 
   /**
@@ -134,7 +125,17 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
+  // 从地图选点插件返回后，在页面的onShow生命周期函数中能够调用插件接口，取得选点结果对象
   onShow() {
+    const location = chooseLocation.getLocation(); // 如果点击确认选点按钮，则返回选点结果对象，否则返回null
+    if (location) {
+      const { latitude, longitude } = location
+      this.setData({
+        latitude,
+        longitude
+      })
+      this.fetchFarmList();
+    }
 
   },
 
@@ -149,7 +150,8 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload() {
-
+    // 页面卸载时设置插件选点数据为null，防止再次进入页面，geLocation返回的是上次选点结果
+    chooseLocation.setLocation(null);
   },
 
   /**

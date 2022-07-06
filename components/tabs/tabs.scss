@@ -1,0 +1,44 @@
+.tabs {
+  display: flex; 
+  position: relative;
+  .tab {
+    font-size: 28rpx;
+    margin-right: 20rpx;
+    color: #777777;
+    &.active {
+      color: #000000;
+      font-weight: bold;
+    }
+  }
+
+  .line {
+    width: 70rpx;
+    height: 4rpx;
+    background-color: green;
+    position: absolute;
+    bottom: -22rpx;
+    left: 0;
+    transition: all 0.5s;
+  }
+
+
+
+
+}
+
+
+// .tabs .tab .active {
+//   /* font-size: 28rpx;
+//   margin-right: 20rpx; */
+//   color: #000000;
+//   font-weight: bold;
+// }
+// .tabs .line {
+//   width: 70rpx;
+//   height: 4rpx;
+//   background-color: green;
+//   position: absolute;
+//   bottom: -22rpx;
+//   left: 0;
+//   transition: all 0.5s;
+// }

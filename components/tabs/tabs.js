@@ -31,10 +31,11 @@ Component({
   methods: {
     onTab(e) {
       const { index } = e.currentTarget.dataset
-      this.setData({
+      // console.log("index是：" + index)
+       this.setData({
         mine: index
       })
-      this.calculateLinePositionX()
+      this.calculateLinePositionX(index)
     },
     toMine() {
       wx.navigateTo({
@@ -43,10 +44,14 @@ Component({
     },
     calculateLinePositionX(index = 0) {
       this.createSelectorQuery().selectAll('.tab').boundingClientRect(results=>{
+        console.log(results)
         const rect = results[index]
+        console.log(rect.left)
         const currentCenterX = rect.left + rect.width / 2
-        const linePositionWidth = rect.width * 0.8
+        console.log(currentCenterX)
+        const linePositionWidth = rect.width * 0.6
         const linePositionX = (currentCenterX - linePositionWidth / 2) - results[0].left
+        // console.log(linePositionX)
         this.setData({
           linePositionWidth,
           linePositionX

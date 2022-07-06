@@ -47,6 +47,8 @@
       </view>
     </view>
 
+    <text>\n</text>
+
     <!-- 消息播放 -->
     <view class='message-play' bindtap='onNewsPage'>
       <image src='../../images/icon/horn.png' class='hornpng'></image>
@@ -57,9 +59,10 @@
       </swiper>
       <text class='arrow'></text>
     </view>
+    <text>\n</text>
 
   </view>
-
+  
   <block wx:for="{{taglist}}" wx:key="id">
     <!-- 每日上新 -->
     <view class='up-to-date' wx:if="{{item.style==2}}">
@@ -126,6 +129,8 @@
       </view>
     </view>
 
+    <text>\n</text>
+
     <!-- 更多宝贝 -->
     <view class='more-prod' wx:if="{{item.style==0}}">
       <view class='title'>{{item.title}}</view>
@@ -154,4 +159,5 @@
     </view>
   </block>
 </view>
+<text>\n</text>
 <wxs module="wxs" src="../../wxs/number.wxs" />
