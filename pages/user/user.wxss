@@ -4,7 +4,13 @@ page {
   background-color: #f7f7f7;
   padding-bottom: 60rpx;
 }
-
+.contact-btn {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  background: salmon;
+    opacity: 0;
+}
 /* 用户信息 */
 
 .userinfo {

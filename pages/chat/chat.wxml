@@ -1,2 +1,4 @@
 <!--pages/chat/chat.wxml-->
-<web-view src="http://180.76.233.143:8080/chat"></web-view>
+<!-- <web-view src="http://180.76.233.143:8080/chat"></web-view> -->
+
+<button open-type="contact" bindcontact="handleContact">联系客服</button>

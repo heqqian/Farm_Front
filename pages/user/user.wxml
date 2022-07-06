@@ -66,13 +66,6 @@
     </view>
 
     <view class='my-menu'>
-      <view class='memu-item' bindtap='toDistCenter'>
-        <view class="i-name">
-          <image src='../../images/icon/promotion.png'></image>
-          <text>分销中心</text>
-        </view>
-        <view class='arrowhead'></view>
-      </view>
       <view class='memu-item' bindtap='toCouponCenter'>
         <view class="i-name">
           <image src='../../images/icon/getCoupon.png'></image>
@@ -94,7 +87,16 @@
         </view>
         <view class='arrowhead'></view>
       </view>
+      <view class='memu-item' >
+        <view class="i-name">
+          <image src='../../images/tabbar/chat-sel.png'></image>
+          <text>在线客服</text>
+        </view>
+        <view class='arrowhead'></view>
+        <button class='contact-btn' open-type='contact'>a</button> 
+      </view>
     </view>
+    
     <!--end 列表项 -->
   </view>
 

@@ -61,12 +61,7 @@
                 "iconPath": "images/tabbar/basket.png",
                 "selectedIconPath": "images/tabbar/basket-sel.png"
             },
-            {
-              "pagePath": "pages/chat/chat",
-              "text": "消息",
-              "iconPath": "images/tabbar/chat.png",
-              "selectedIconPath": "images/tabbar/chat-sel.png"
-            },
+           
             {
                 "pagePath": "pages/user/user",
                 "text": "我的",
