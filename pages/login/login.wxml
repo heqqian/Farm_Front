@@ -1,6 +1,8 @@
 <!--pages/login/login.wxml-->
-<image src='http://img-test.gz-yami.com/mini/logo.jpg' class='c-logo'></image>
-<view class="title">mall4j</view>
+<!-- <image src='http://img-test.gz-yami.com/mini/logo.jpg' class='c-logo'></image> -->
+<image src='../../images/icon.jpg' class='c-logo'></image>
+
+<view class="title">绿色农场</view>
 <view class="login-form">
     <view class="item">
         <view class="account">

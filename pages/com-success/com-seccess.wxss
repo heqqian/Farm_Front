@@ -1,0 +1,16 @@
+/* pages/com-success/com-seccess.wxss */
+image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.com-success{
+  text-align: center;
+  font-size: 45rpx;
+  padding: 50rpx;
+}
+button{
+  width: 300rpx;
+  border-radius: 50rpx;
+  border: 1rpx solid;
+  font-size:30rpx;
+}

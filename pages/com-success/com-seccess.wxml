@@ -1,0 +1,8 @@
+<!--pages/com-success/com-seccess.wxml-->
+
+<view class='com-success'>
+  <image src="/images/icon/success.png"></image>
+  <text> 评价成功</text>
+</view>
+
+<button type="default" bindtap="returnHome">返回首页</button>

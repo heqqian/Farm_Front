@@ -278,5 +278,11 @@ Page({
         }
       }
     })
+  },
+  /**评价 */
+  onComment(e){
+    wx.navigateTo({
+      url: '/pages/comment/comment?orderNum=' + e.currentTarget.dataset.ordernum
+    })
   }
 })

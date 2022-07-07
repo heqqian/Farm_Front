@@ -65,7 +65,11 @@ Page({
       longitude
     })
   },
-
+  toDetail() {
+    wx.navigateTo({
+      url: '/pages/farm-detail/farm-detail',
+    })
+  },
   collapse() {
     this.setData({
       collapse: !this.data.collapse

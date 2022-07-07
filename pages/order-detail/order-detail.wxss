@@ -284,3 +284,8 @@ page {
 .order-state .order-sts.normal {
   color: #333;
 }
+
+.btn_talk[plain] {
+  padding: 0;
+  border:none;
+}

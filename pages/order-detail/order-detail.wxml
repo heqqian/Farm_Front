@@ -146,11 +146,15 @@
     </view>
 
     <!-- 底部栏 -->
-    <view class='order-detail-footer'>
+    <view class='order-detail-footer' style="width: 750rpx; height: 100rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 1101rpx; position: fixed">
       <text class='dele-order' wx:if="{{status==5||status==6}}">删除订单</text>
       <view class='footer-box'>
-        <text class='apply-service'>联系客服</text>
-        <text class='buy-again'>再次购买</text>
+        <button class="apply-service" open-type="contact" style="width: 164rpx; height: 70rpx; display: block; box-sizing: border-box; left: -180rpx; top: -4rpx; position: relative">
+          <text>联系客服</text>
+        </button>
+        <button class='buy-again' style="width: 164rpx; height: 70rpx; display: block; box-sizing: border-box; left: 10rpx; top: -74rpx; position: relative">
+          <text>再次购买</text>
+        </button>
       </view>
     </view>
 

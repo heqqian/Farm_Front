@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents":{
+   "coupon": "/components/coupon/coupon",
+   "van-rate": "/vant/rate/index"
+  },
+  "navigationBarTitleText": "农场详情"
 }

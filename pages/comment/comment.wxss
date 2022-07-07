@@ -1,0 +1,258 @@
+/* pages/comment/comment.wxss */
+.contains{
+  color:#707070;
+  font-size: 30rpx;
+  margin: 15rpx;
+}
+.release{
+  color: #fff;
+  background: #f95807;
+  margin: 0 10%;
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: fixed;
+  bottom: 10rpx;
+  
+}
+
+.score{
+  height: 150rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.score-left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 30rpx;
+  justify-content: space-between;
+}
+.score-left image{
+  height: 100rpx;
+  width: 100rpx;
+}
+.score-right{
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 77%;
+}
+.score-right image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 12rpx;
+}
+.score_text{
+  width: 150rpx;
+  text-align: center;
+  color: #b0b0b0;
+}
+
+.textarea{
+  position: relative;
+  margin-top: 20rpx;
+  height: 540rpx;
+  width: 100%;
+}
+.textarea textarea{
+  height: 300rpx;
+  width: 100%;
+  border:6rpx solid #efefef;
+  border-radius: 20rpx;
+  color: black;
+  padding: 20rpx;
+}
+.textarea-text{
+  color: #ccc;
+  font-size: 30rpx;
+}
+.textarea .title{
+  margin:10rpx 0;
+}
+.picture{
+
+  z-index: 99;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.picture_item image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.picture_upload{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 180rpx;
+  width: 180rpx;
+  margin: 5rpx;
+ 
+}
+.picture_upload image{
+  height: 180rpx;
+  width: 180rpx;
+}
+.picture_delete{
+  width: 180rpx;
+  height: 50rpx;
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  bottom:-50rpx;
+  right:0rpx;
+  border: 5rpx #e6e6e6 solid;
+  border-top: none;
+ 
+}
+.picture_delete image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.title{
+  font-size: 30rpx;
+}
+
+button{
+  border-radius: 40rpx;
+}
+
+.picture_item{
+  border:5rpx solid #e6e6e6;
+}
+
+.picture_item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 230rpx;
+  width: 180rpx;
+  border: 7rpx #e6e6e6 dashed;
+}
+
+/* 商品列表 */
+
+.prod-item {
+  background-color: #fff;
+  margin-top: 15rpx;
+  font-size: 28rpx;
+}
+
+.prod-item .item-cont .prod-pic image {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.prod-item .item-cont {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  border-top: 2rpx solid #f1f1f1;
+}
+
+.prod-item .item-cont .prod-pic {
+  font-size: 0;
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  overflow: hidden;
+  background: #fff;
+  margin-right: 16rpx;
+}
+
+.prod-item .item-cont .prod-pic image {
+  width: 100%;
+  height: 100%;
+}
+
+.prod-item .item-cont .prod-info {
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  width: 100%;
+  position: relative;
+  height: 80px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  flex: 1;
+}
+
+.prod-item .item-cont .prod-info .prodname {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  max-height: 86rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.prod-item .item-cont .prod-info .prod-info-cont {
+  position: relative;
+  color: #999;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+}
+
+.prod-item .item-cont .prod-info .prod-info-cont .info-item {
+  color: #999;
+  height: 28rpx;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  width: 70%;
+}
+
+.prod-item .item-cont .prod-info .prod-info-cont .number {
+  float: left;
+  margin-right: 20rpx;
+}
+
+.prod-item .price-nums {
+  margin-top: 30rpx;
+}
+
+.prod-item .price-nums .prodprice {
+  color: #333;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  float: left;
+}
+
+.prod-item{
+  box-shadow: 0rpx 6rpx 8rpx rgba(58,134,185,0.2);
+}
+
+.prod-item .price-nums .btn-box {
+  float: right;
+  text-align: right;
+}
+
+.prod-item .price-nums .btn-box .btn {
+  padding: 6rpx 30rpx;
+  line-height: 36rpx;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  display: inline-block;
+  border: 2rpx solid #e4e4e4;
+  border-radius: 50rpx;
+}

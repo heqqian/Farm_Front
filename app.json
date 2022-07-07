@@ -22,8 +22,11 @@
         "pages/recent-news/recent-news",
         "pages/news-detail/news-detail",
         "pages/farm_s/farm_s",
+        "pages/farm-detail/farm-detail",
         "pages/chat/chat",
-        "pages/farm-m/farm-m"
+        "pages/farm-m/farm-m",
+        "pages/com-success/com-seccess",
+        "pages/comment/comment"
     ],
     "permission": {
       "scope.userLocation": {

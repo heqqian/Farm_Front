@@ -127,6 +127,24 @@ Page({
       remarks: e.detail.value
     });
   },
+  
+
+  // //进行指纹识别
+  // FingerPrint: function(){
+  //   wx.startSoterAuthentication({
+  //    requestAuthModes: ['fingerPrint'],
+  //    challenge: '123456',
+  //    authContent: '请用指纹',
+  //    success(res) {
+  //     console.log("识别成功",res)
+  //     show("提示", "识别成功", false);
+  //    },
+  //    fail(res){
+  //     console.log("识别失败",res)
+  //     show("提示", "识别失败", false);
+  //    }
+  //   })
+  //  },
 
   /**
    * 提交订单
@@ -139,8 +157,22 @@ Page({
       })
       return;
     }
-
-    this.submitOrder();
+    //指纹识别
+    wx.startSoterAuthentication({
+      requestAuthModes: ['fingerPrint'],
+      challenge: '123456789',
+      authContent: '请验证指纹',
+      success(res) {
+       console.log("识别成功",res)
+       show("提示", "支付成功", false);
+      },
+      fail(res){
+       console.log("识别失败",res)
+       show("提示", "支付失败，请重新验证指纹", false);
+       return;
+      }
+     })
+     this.submitOrder();
   },
 
 
@@ -311,3 +343,31 @@ Page({
     }
   }
 })
+
+ /**
+  * 显示提示信息
+  * tit 提示的标题
+  * msg 提示的内容
+  * q 是否有取消按钮（布尔值）
+  * succ 用户点击确定的回调（非必须）
+  * fail 用户点击取消的回调（非必须）
+  *
+  */
+ function show(tit,msg,q,succ,fail){
+  wx.showModal({
+   title: tit,
+   content: msg,
+   showCancel:q,
+   success: function (res) {
+    if (res.confirm) {
+     if (succ){
+      succ();
+     }
+    } else if (res.cancel) {
+     if (fail) {
+      fail();
+     }
+    }
+   }
+  })
+ }

@@ -75,7 +75,7 @@ Page({
   toLimitedTimeOffer: function(e) {
     wx.showToast({
       icon:"none",
-      title: '该功能未开源'
+      title: '该功能仍在开发中，敬请期待~'
     })
   },
 
