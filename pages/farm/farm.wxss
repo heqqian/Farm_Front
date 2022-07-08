@@ -175,3 +175,17 @@
   padding: 0;
   border:none;   
 }
+
+
+
+.show {
+  display: block;
+}
+
+.store-list_hide {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  transition: all 0.5s;
+  display: none;
+}

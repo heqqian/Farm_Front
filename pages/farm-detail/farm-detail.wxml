@@ -2,10 +2,16 @@
 <!-- 农场详情 -->
 <view class="container">
   <!-- 轮播图 -->
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{indicatorActiveColor}}">
+  <swiper indicator-dots="true" autoplay="true" indicator-color="#f2f2f2" interval="3000" duration="1000" indicator-active-color="#eb2444">
     <!-- <block wx:for="{{imgs}}" wx:key='*this'> -->
       <swiper-item>
-        <image src='https://ts1.cn.mm.bing.net/th/id/R-C.c461a9d971cea2c96804f6ca46266d10?rik=7P%2fb2qtiGjdumQ&riu=http%3a%2f%2fimg95.699pic.com%2fphoto%2f50159%2f5593.jpg_wh860.jpg&ehk=YDsItXTbDGCqT4q%2bipe3ZhNO2REboqaQr1VVWKh0lg0%3d&risl=&pid=ImgRaw&r=0'></image>
+        <image src='https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/swiper_0.jpg'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/swiper_1.jpg'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/detail_5.jpg'></image>
       </swiper-item>
     <!-- </block> -->
   </swiper>
@@ -15,22 +21,22 @@
   <view class='prod-info'>
     <view class="tit-wrap">
       <view class="prod-tit">七里香农场</view>
-      <view class="col" bindtap='addOrCannelCollection'>
-        <!-- <image  src="../../images/icon/prod-col.png"></image> -->
+      <!-- <view class="col" bindtap='addOrCannelCollection'>
+        <image  src="../../images/icon/prod-col.png"></image>
         <image  src="../../images/icon/prod-col-red.png"></image>
         收藏
-      </view>
+      </view> -->
     </view>
     <view class="sales-p">{{brief}}</view>
     <view class="prod-price">
-      <text class="price">￥<text class="price-num">9999</text><view class="99"></view></text>
+      <text class="price">￥<text class="price-num">168 / 月</text><view class="99"></view></text>
       <text class="sales"></text>
     </view>
   </view>
   <!-- 已选规格 -->
   <view class="sku" bindtap='showSku'>
     <view class="sku-tit">已选</view>
-    <view class="sku-con">块地</view>
+    <view class="sku-con">1 块地</view>
     <view class="more">...</view>
   </view>
   <!-- 评价 -->
@@ -53,7 +59,7 @@
         <text>差评(0)</text>
         <text>有图(0)</text>
       </view>
-      <!-- <view class="cmt-items">
+      <view class="cmt-items">
         <view class="cmt-item" wx:for="{{littleCommPage}}" wx:key="prodCommId">
           <view class="cmt-user">
             <text class="date">{{item.recTime}}</text>
@@ -68,35 +74,47 @@
             <image src="{{commPic}}" wx:for='{{item.pics}}' wx:for-item="commPic" wx:key='*this'></image>
           </scroll-view>
         </view>
-      </view> -->
-      <!-- <view class="cmt-more-v" wx:if="{{prodCommPage.records.length > 2}}">
+      </view>
+      <view class="cmt-more-v" wx:if="{{prodCommPage.records.length > 2}}">
         <text bindtap='showComment'>查看全部评价</text>
-      </view> -->
+      </view>
     </view>
   </view>
+
   <!-- 商品详情 -->
-  <!-- <view class="prod-detail">
+  <view class="prod-detail">
     <view>
-      <rich-text nodes="{{content}}"></rich-text>
-      <image src="//img14.360buyimg.com/cms/jfs/t1/25195/1/9487/388554/5c7f80a5E8b8f8f0c/46818404849d6ec6.jpg!q70.dpg" mode="widthFix"></image>
+      <image src="https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/detail_f.jpg" mode="widthFix"></image>
     </view>
-  </view> -->
+    <view>
+      <image src="https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/detail_0.jpg" mode="widthFix"></image>
+    </view>
+    <view>
+      <image src="https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/detail_3.jpg" mode="widthFix"></image>
+    </view>
+    <view>
+      <image src="https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/detail_1.jpg" mode="widthFix"></image>
+    </view>
+    <view>
+      <image src="https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/detail_2.jpg" mode="widthFix"></image>
+    </view>
+  </view>
   <!-- end 商品详情 -->
+
   <!-- 底部按钮 -->
   <view class="cart-footer">
     <view class="btn icon" bindtap='toHomePage'>
       <image src="../../images/tabbar/home.png"></image>
       首页
     </view>
-    <view class="btn icon" bindtap='toCartPage'>
-      <image src="../../images/tabbar/basket.png"></image>
-      购物车
-      <view class='badge badge-1'>1</view>
+    <view class="btn icon" bindtap='addOrCannelCollection'>
+      <image src="../../images/icon/star_on.png"></image>
+      收藏
     </view>
     <view class="btn cart" bindtap='showSku'>
-      <text>在线咨询</text>
+        <text>在线咨询</text>
     </view>
-    <view style="background-color: rgb(37, 168, 124);" class="btn buy" bindtap='buyNow'>
+    <view style="background-color: rgb(37, 168, 124);" class="btn buy" bindtap='rentNow'>
       <text>立即租赁</text>
     </view>
   </view>
@@ -104,7 +122,7 @@
   <!-- end 底部按钮 -->
 
   <!-- 规格弹窗 -->
-  <!-- <view class="pup-sku" wx:if="{{skuShow}}">
+  <view class="pup-sku" wx:if="{{skuShow}}">
     <view class="pup-sku-main">
       <view class='pup-sku-header'>
         <image class="pup-sku-img" src="{{defaultSku.pic?defaultSku.pic:pic}}"></image>
@@ -151,9 +169,9 @@
         <view class="btn buy" bindtap='buyNow'>立即租赁</view>
       </view>
     </view>
-  </view> -->
+  </view>
   <!-- 评价弹窗 -->
-  <!-- <view class="cmt-popup" wx:if="{{commentShow}}">
+  <view class="cmt-popup" wx:if="{{commentShow}}">
     <view class="cmt-tit">
       <view class="cmt-t">
         商品评价
@@ -192,6 +210,6 @@
         <text bindtap='getMoreCommPage'>点击加载更多</text>
       </view>
     </view>
-  </view> -->
+  </view>
 </view>
 <wxs module="wxs" src="../../wxs/number.wxs" />

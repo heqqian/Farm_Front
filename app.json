@@ -26,7 +26,8 @@
         "pages/chat/chat",
         "pages/farm-m/farm-m",
         "pages/com-success/com-seccess",
-        "pages/comment/comment"
+        "pages/comment/comment",
+        "pages/farm_rent/farm_rent"
     ],
     "permission": {
       "scope.userLocation": {

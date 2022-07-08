@@ -1,6 +1,6 @@
 <view class="page">
   <view class="header">
-    <tabs tabs="{{ [{value: 'nearby', label:'附近农场'}, {value:'mine', label:'我的农场'}] }}"></tabs>
+    <tabs bind:change="change2" tabs="{{ [{value: 'nearby', label:'附近农场'}, {value:'mine', label:'我的农场'}] }}"></tabs>
     <input class="search" placeholder="搜索农场" type="text" bindtap="goToFarmSearch" />
   </view>
 
@@ -11,10 +11,10 @@
   </map>
   
   <view class="collapse-area" bindtap="collapse">
-  {{ collapse ? '展开地图' : '收起地图' }}
+  {{ collapse ? '展开地图' : '收起地图' }}{{changeTabs}}
   </view>
       
-  <scroll-view class="store-list" style="height:calc(100vh - {{mapShow? 700 : 180}}rpx)" scroll-y >
+  <scroll-view class="{{ showView?'store-list':'store-list_hide' }}" style="height:calc(100vh - {{mapShow? 700 : 180}}rpx)" scroll-y >
     <view wx:for="{{ farmList }}" wx:key="index" class="store-box">
       <view class="info-area" bindtap="toDetail">
         <view class="name">{{ item.name }}</view>
@@ -27,6 +27,30 @@
         <view class="distance">距离{{ item.distance }}km</view>
         <view class="action-area">
           <button class="btn_talk" plain="true" bindtap="navigateLocation" data-latitude="{{ item.latitude }}" data-longitude="{{ item.longitude }}">
+            <image class="location"  src="../../images/map/bl.png"></image>
+          </button>
+          <button class="btn_talk" plain="true" bindtap="" open-type="contact">
+            <image class="talk" src="../../images/map/talk.png">
+            </image>
+          </button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <scroll-view class="{{ showView?'store-list_hide':'store-list' }}" style="height:calc(100vh - {{mapShow? 700 : 180}}rpx)" scroll-y >
+    <view class="store-box">
+      <view class="info-area" bindtap="toMine">
+        <view class="name">友谊农场</view>
+        <view class="info">天心区文源街道999号</view>
+        <view class="info">营业时间：08:00~22:00 </view>
+        <view class="tag">营业中</view>
+      </view>
+
+      <view class="location-area">
+        <view class="distance">距离1km</view>
+        <view class="action-area">
+          <button class="btn_talk" plain="true" bindtap="navigateLocation" data-latitude="27.700149" data-longitude="113.144166">
             <image class="location"  src="../../images/map/bl.png"></image>
           </button>
           <button class="btn_talk" plain="true" bindtap="" open-type="contact">

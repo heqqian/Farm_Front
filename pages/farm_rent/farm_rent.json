@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "cart-bar": "../../components/cart-bar/index"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "农产品分类",
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "default"
+}

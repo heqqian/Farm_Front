@@ -62,5 +62,23 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+
+  /**
+   * 跳转到首页
+   */
+  toHomePage: function() {
+    wx.switchTab({
+      url: '/pages/index/index',
+    })
+  },
+
+   /**
+   * 租赁
+   */
+  rentNow() {
+    wx.navigateTo({
+      url: '/pages/farm_rent/farm_rent',
+    })
+  },
 })

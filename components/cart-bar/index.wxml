@@ -1,0 +1,24 @@
+<view class="cart-bar">
+    <image class="cart-icon" src="../../images/icon/car-new.png" bindtap="onClickBag" style="width: 46rpx; height: 50rpx; display: block; box-sizing: border-box"></image>
+    <view class="summary">
+        合计:
+        <view style="font-weight:bold;">￥</view>
+        <view class="price">{{totalPrice}}</view>
+    </view>
+    <view class="checkout-btn {{disabled ? 'disabled':''}}">
+        去结算
+    </view>
+</view>
+
+<view wx:if="{{ showList }}" class="order-list">
+    <view class="item" wx:for="{{ list }}" wx:key="index">
+        <image class="pic" src="{{ item.cover }}"></image>
+        <view class="label">{{ item.name }}</view>
+        <view class="specs">
+            {{ item.specsList }}
+        </view>
+        <view class="number">
+            {{ item.count }}
+        </view>
+    </view>
+</view>

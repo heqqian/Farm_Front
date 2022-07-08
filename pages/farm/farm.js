@@ -22,6 +22,8 @@ Page({
       {id: 7, title: '晴天农场', latitude: 27.708482, longitude: 113.145435, iconPath: '../../images/map/farm.png', width: '55rpx', height: '69rpx'},
       {id: 8, title: '断弦农场', latitude: 27.708482, longitude: 113.145435, iconPath: '../../images/map/farm.png', width: '55rpx', height: '69rpx'},
     ],
+    changeTabs:0,
+    showView: true,
 
     farmList: [],
     dict: {
@@ -33,14 +35,39 @@ Page({
   mapContext: null,
   mapSdk: null,
   // mapKey: key,
+
+  change2: function(e) {
+    var changeTabs = e.detail
+    console.log(changeTabs)
+    var that = this
+    if (changeTabs == 0){
+      that.setData({
+        showView: true
+      })
+    }
+    if (changeTabs == 1){
+      that.setData({
+        showView: false
+      })
+    }
+  },
+
+  toMine() {
+    wx.navigateTo({
+      url: '/pages/farm-m/farm-m',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    showView: (options.showView == "true" ? true : false)
     this.initMapSdk()
     this.loadCurrentLocation()
     this.initMapContext()
     this.fetchFarmList()
+    
   },
   initMapSdk() {
     this.mapSdk = new QQMapWX({key})
@@ -107,7 +134,7 @@ Page({
     //   url: '/pages/farm_s/farm_s',
     // })
     // const key = this.data.mapKey
-    console.log(key)
+    // console.log(key)
     const referer = 'mall4m-master'; //调用插件的app的名称
     const location = JSON.stringify({
       latitude: this.data.latitude,
@@ -123,7 +150,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    
   },
 
   /**

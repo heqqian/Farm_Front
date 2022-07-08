@@ -63,6 +63,13 @@
           "query": "sts=4",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/farm_rent/farm_rent",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
