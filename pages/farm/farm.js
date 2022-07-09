@@ -54,7 +54,7 @@ Page({
 
   toMine() {
     wx.navigateTo({
-      url: '/pages/farm-m/farm-m',
+      url: '/pages/farm_rent/farm_rent',
     })
   },
 

@@ -37,68 +37,68 @@ Page({
   },
 
   //加载订单数据
-  loadOrderData: function() {
-    var addrId = 0;
-    if (this.data.userAddr != null) {
-      addrId = this.data.userAddr.addrId;
-    }
-    wx.showLoading({
-      mask: true
-    });
-    var params = {
-      url: "/p/order/confirm",
-      method: "POST",
-      data: {
-        addrId: addrId,
-        orderItem: this.data.orderEntry === "1" ? JSON.parse(wx.getStorageSync("orderItem")) : undefined,
-        basketIds: this.data.orderEntry === "0" ? JSON.parse(wx.getStorageSync("basketIds")) : undefined,
-        couponIds: this.data.couponIds,
-        userChangeCoupon: 1
-      },
-      callBack: res => {
-        wx.hideLoading();
-        let orderItems = [];
+  // loadOrderData: function() {
+  //   var addrId = 0;
+  //   if (this.data.userAddr != null) {
+  //     addrId = this.data.userAddr.addrId;
+  //   }
+  //   wx.showLoading({
+  //     mask: true
+  //   });
+  //   var params = {
+  //     url: "/p/order/confirm",
+  //     method: "POST",
+  //     data: {
+  //       addrId: addrId,
+  //       orderItem: this.data.orderEntry === "1" ? JSON.parse(wx.getStorageSync("orderItem")) : undefined,
+  //       basketIds: this.data.orderEntry === "0" ? JSON.parse(wx.getStorageSync("basketIds")) : undefined,
+  //       couponIds: this.data.couponIds,
+  //       userChangeCoupon: 1
+  //     },
+  //     callBack: res => {
+  //       wx.hideLoading();
+  //       let orderItems = [];
 
-        res.shopCartOrders[0].shopCartItemDiscounts.forEach(itemDiscount => {
-          orderItems = orderItems.concat(itemDiscount.shopCartItems)
-        })
-        if (res.shopCartOrders[0].coupons) {
-          let canUseCoupons = []
-          let unCanUseCoupons = []
-          res.shopCartOrders[0].coupons.forEach(coupon => {
-            if (coupon.canUse) {
-              canUseCoupons.push(coupon)
-            } else {
-              unCanUseCoupons.push(coupon)
-            }
-          })
-          this.setData({
-            coupons: {
-              totalLength: res.shopCartOrders[0].coupons.length,
-              canUseCoupons: canUseCoupons,
-              unCanUseCoupons: unCanUseCoupons
-            }
-          })
-        }
+  //       res.shopCartOrders[0].shopCartItemDiscounts.forEach(itemDiscount => {
+  //         orderItems = orderItems.concat(itemDiscount.shopCartItems)
+  //       })
+  //       if (res.shopCartOrders[0].coupons) {
+  //         let canUseCoupons = []
+  //         let unCanUseCoupons = []
+  //         res.shopCartOrders[0].coupons.forEach(coupon => {
+  //           if (coupon.canUse) {
+  //             canUseCoupons.push(coupon)
+  //           } else {
+  //             unCanUseCoupons.push(coupon)
+  //           }
+  //         })
+  //         this.setData({
+  //           coupons: {
+  //             totalLength: res.shopCartOrders[0].coupons.length,
+  //             canUseCoupons: canUseCoupons,
+  //             unCanUseCoupons: unCanUseCoupons
+  //           }
+  //         })
+  //       }
 
-        this.setData({
-          orderItems: orderItems,
-          actualTotal: res.actualTotal,
-          total: res.total,
-          totalCount: res.totalCount,
-          userAddr: res.userAddr,
-          transfee: res.shopCartOrders[0].transfee,
-          shopReduce: res.shopCartOrders[0].shopReduce,
-        });
-      },
-      errCallBack: res => {
-        wx.hideLoading();
-        this.chooseCouponErrHandle(res)
-      }
-    };
-    http.request(params);
+  //       this.setData({
+  //         orderItems: orderItems,
+  //         actualTotal: res.actualTotal,
+  //         total: res.total,
+  //         totalCount: res.totalCount,
+  //         userAddr: res.userAddr,
+  //         transfee: res.shopCartOrders[0].transfee,
+  //         shopReduce: res.shopCartOrders[0].shopReduce,
+  //       });
+  //     },
+  //     errCallBack: res => {
+  //       wx.hideLoading();
+  //       this.chooseCouponErrHandle(res)
+  //     }
+  //   };
+  //   http.request(params);
 
-  },
+  // },
 
   /**
    * 优惠券选择出错处理方法
@@ -164,7 +164,10 @@ Page({
       authContent: '请验证指纹',
       success(res) {
        console.log("识别成功",res)
-       show("提示", "支付成功", false);
+       show("提示", "支付成功", true);
+      wx.navigateTo({
+        url: '/pages/pay-result/pay-result',
+      })
       },
       fail(res){
        console.log("识别失败",res)
@@ -177,24 +180,24 @@ Page({
 
 
   submitOrder: function() {
-    wx.showLoading({
-      mask: true
-    });
-    var params = {
-      url: "/p/order/submit",
-      method: "POST",
-      data: {
-        orderShopParam: [{
-          remarks: this.data.remark,
-          shopId: 1
-        }]
-      },
-      callBack: res => {
-        wx.hideLoading();
-        this.calWeixinPay(res.orderNumbers);
-      }
-    };
-    http.request(params);
+    // wx.showLoading({
+    //   mask: true
+    // });
+    // var params = {
+    //   url: "/p/order/submit",
+    //   method: "POST",
+    //   data: {
+    //     orderShopParam: [{
+    //       remarks: this.data.remark,
+    //       shopId: 1
+    //     }]
+    //   },
+    //   callBack: res => {
+    //     wx.hideLoading();
+    //     this.calWeixinPay(res.orderNumbers);
+    //   }
+    // };
+    // http.request(params);
   },
 
   /**
@@ -256,7 +259,7 @@ Page({
       });
     }
     //获取订单数据
-    this.loadOrderData();
+    // this.loadOrderData();
   },
 
   /**

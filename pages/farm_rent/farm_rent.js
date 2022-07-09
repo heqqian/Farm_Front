@@ -20,6 +20,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showToast({
+      title: '请在本页面选择您想要培育的农产品~~',
+      icon: 'none'
+    })
     var ths = this;
     //加载分类列表
     var params = {
