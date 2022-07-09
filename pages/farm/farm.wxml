@@ -11,7 +11,7 @@
   </map>
   
   <view class="collapse-area" bindtap="collapse">
-  {{ collapse ? '展开地图' : '收起地图' }}{{changeTabs}}
+  {{ collapse ? '展开地图' : '收起地图' }}
   </view>
       
   <scroll-view class="{{ showView?'store-list':'store-list_hide' }}" style="height:calc(100vh - {{mapShow? 700 : 180}}rpx)" scroll-y >
@@ -41,8 +41,8 @@
   <scroll-view class="{{ showView?'store-list_hide':'store-list' }}" style="height:calc(100vh - {{mapShow? 700 : 180}}rpx)" scroll-y >
     <view class="store-box">
       <view class="info-area" bindtap="toMine">
-        <view class="name">友谊农场</view>
-        <view class="info">天心区文源街道999号</view>
+        <view class="name">七里香农场</view>
+        <view class="info">咕咕区噜噜街道16号</view>
         <view class="info">营业时间：08:00~22:00 </view>
         <view class="tag">营业中</view>
       </view>
@@ -50,10 +50,10 @@
       <view class="location-area">
         <view class="distance">距离1km</view>
         <view class="action-area">
-          <button class="btn_talk" plain="true" bindtap="navigateLocation" data-latitude="{{28.146958}}" data-longitude="{{112.997249}}">
+          <button class="btn_talk" plain="true" bindtap="navigateLocation" data-latitude="{{31.768095}}" data-longitude="{{104.757343}}">
             <image class="location"  src="../../images/map/bl.png"></image>
           </button>
-          <button class="btn_talk" plain="true" bindtap="" open-type="contact">
+          <button class="btn_talk" plain="true" open-type="contact">
             <image class="talk" src="../../images/map/talk.png">
             </image>
           </button>

@@ -521,6 +521,7 @@ img {
   height: 98rpx;
   z-index: 999;
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
 }
 
 .cart-footer .btn {
@@ -551,11 +552,14 @@ img {
 .cart-footer .btn.cart {
   background: #584e61;
   color: #fff;
+  border-radius: 80rpx 0rpx 0rpx 80rpx;  
 }
 
 .cart-footer .btn.buy {
   background: #eb2444;
   color: #fff;
+  border-radius: 0rpx 80rpx 80rpx 0rpx;
+  margin-right: 10rpx;
 }
 
 .cart-footer.gray .btn.cart, .cart-footer.gray .btn.buy{

@@ -21,7 +21,7 @@ Page({
    */
   onLoad: function (options) {
     wx.showToast({
-      title: '请在本页面选择您想要培育的农产品~~',
+      title: '请在本页面选择您想要培育的农产品',
       icon: 'none'
     })
     var ths = this;
