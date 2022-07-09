@@ -65,6 +65,8 @@
   margin: 14rpx 25rpx;
   display: flex;
   align-items: center;
+  box-shadow: 0 4px 10px 0 rgba(83, 83, 83, 0.288);
+  border-radius: 20rpx;
 }
 .store-list .store-box .info-area {
   flex: 1;

@@ -78,7 +78,7 @@ Page({
    */
   rentNow() {
     wx.navigateTo({
-      url: '/pages/farm_rent/farm_rent',
+      url: '/pages/farm_order/farm_order',
     })
   },
 })

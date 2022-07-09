@@ -50,7 +50,7 @@
       <view class="location-area">
         <view class="distance">距离1km</view>
         <view class="action-area">
-          <button class="btn_talk" plain="true" bindtap="navigateLocation" data-latitude="27.700149" data-longitude="113.144166">
+          <button class="btn_talk" plain="true" bindtap="navigateLocation" data-latitude="{{28.146958}}" data-longitude="{{112.997249}}">
             <image class="location"  src="../../images/map/bl.png"></image>
           </button>
           <button class="btn_talk" plain="true" bindtap="" open-type="contact">

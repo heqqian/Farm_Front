@@ -55,5 +55,5 @@
   </view>
 
 </view>
-<cart-bar></cart-bar>
+<!-- <cart-bar></cart-bar> -->
 <wxs module="wxs" src="../../wxs/number.wxs" />

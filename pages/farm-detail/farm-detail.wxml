@@ -108,7 +108,7 @@
       首页
     </view>
     <view class="btn icon" bindtap='addOrCannelCollection'>
-      <image src="../../images/icon/star_on.png"></image>
+      <image src="../../images/icon/star_off.png"></image>
       收藏
     </view>
     <view class="btn cart" bindtap='showSku'>
