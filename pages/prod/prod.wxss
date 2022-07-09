@@ -1,5 +1,5 @@
 page {
-  background: #f4f4f4;
+  background:#cad7c5; 
   height: 100%;
 }
 
@@ -17,6 +17,12 @@ swiper {
 swiper image {
   height: 750rpx;
   width: 100%;
+  position: absolute;
+  /*
+  margin: 0 30rpx;
+  border-radius: 50rpx;
+  margin-top: 20rpx;
+  */
 }
 
 /** 商品信息 */
@@ -25,6 +31,11 @@ swiper image {
   padding: 30rpx 30rpx 0 30rpx;
   position: relative;
   background: #fff;
+  margin-top: 20rpx;
+  width: 650rpx;
+  margin-left: 15rpx;
+  border-radius: 20rpx;
+  border:7rpx solid #9bb496
 }
 
 .tit-wrap {
@@ -217,6 +228,10 @@ swiper image {
   margin-top: 20rpx;
   position: relative;
   line-height: 48rpx;
+  width: 670rpx;
+  margin-left: 15rpx;
+  border-radius: 20rpx;
+  border: 7rpx solid #9bb496;
 }
 
 .sku-tit {
@@ -236,6 +251,7 @@ swiper image {
   overflow: hidden;
   font-size: 28rpx;
   font-weight: bold;
+
 }
 
 /** 评价*/
@@ -245,6 +261,10 @@ swiper image {
   margin-top: 20rpx;
   position: relative;
   line-height: 48rpx;
+  width: 710rpx;
+  margin-left: 15rpx;
+  border-radius: 20rpx;
+  border: 7rpx solid #9bb496;
 }
 
 .cmt-tit {
@@ -480,6 +500,10 @@ swiper image {
   margin-top: 20rpx;
   position: relative;
   line-height: 48rpx;
+  width: 710rpx;
+  margin-left: 15rpx;
+  border-radius: 20rpx;
+  border: 7rpx solid #9bb496;
 }
 
 .det-tit {
@@ -521,6 +545,7 @@ img {
   height: 98rpx;
   z-index: 999;
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
 }
 
 .cart-footer .btn {
@@ -549,13 +574,16 @@ img {
 }
 
 .cart-footer .btn.cart {
-  background: #584e61;
+  background: #e8b49a;
   color: #fff;
+  border-radius: 80rpx 0rpx 0rpx 80rpx;  
 }
 
 .cart-footer .btn.buy {
-  background: #eb2444;
+  background: #e67762;
   color: #fff;
+  border-radius: 0rpx 80rpx 80rpx 0rpx;
+  margin-right: 10rpx;
 }
 
 .cart-footer.gray .btn.cart, .cart-footer.gray .btn.buy{
@@ -874,12 +902,12 @@ img {
 }
 
 .pup-sku-footer .btn.cart {
-  background: #584e61;
+  background: #e8b49a;
   color: #fff;
 }
 
 .pup-sku-footer .btn.buy {
-  background: #eb2444;
+  background: #e67762;
   color: #fff;
 }
 

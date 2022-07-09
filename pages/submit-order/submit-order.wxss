@@ -355,7 +355,7 @@ page {
 .submit-order-footer .footer-box {
   padding: 0 10rpx;
   width: 200rpx;
-  background: #eb2444;
+  background: #e67762;
   text-align: center;
   line-height: 100rpx;
   color: #fff;

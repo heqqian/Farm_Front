@@ -43,6 +43,11 @@ container .prod-list {
   display: flex;
   align-items: center;
   padding: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 10px;
+  box-shadow: 0 4px 10px 0 rgba(83, 83, 83, 0.288);
+  border-radius: 20rpx;
+  margin-top: 20rpx;
 }
 
 .prod-list .item .prodinfo {
@@ -325,6 +330,7 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   height: 98rpx;
   border-top: 2rpx solid #f4f4f4;
   z-index:999;
+  background-color: #fff;
 }
 
 .cart-footer .btn {
@@ -380,8 +386,9 @@ line-height:102rpx;
 
 .cart-footer .btn.settle {
   width: 200rpx;
-  background: #eb2444;
+  background: #e67762;
   color: #fff;
+  border-radius: 50rpx 0rpx 0rpx 50rpx;
 }
 
 /** end 底部按钮 */
