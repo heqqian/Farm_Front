@@ -5,13 +5,13 @@
   <swiper indicator-dots="true" autoplay="true" indicator-color="#f2f2f2" interval="3000" duration="1000" indicator-active-color="#eb2444">
     <!-- <block wx:for="{{imgs}}" wx:key='*this'> -->
       <swiper-item>
-        <image src='https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/swiper_0.jpg'></image>
+        <image src='https://green-farm-demo.oss-cn-hangzhou.aliyuncs.com/farm1.png'></image>
       </swiper-item>
       <swiper-item>
-        <image src='https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/swiper_1.jpg'></image>
+        <image src='https://green-farm-demo.oss-cn-hangzhou.aliyuncs.com/farm2.png'></image>
       </swiper-item>
       <swiper-item>
-        <image src='https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/detail_5.jpg'></image>
+        <image src='https://green-farm-demo.oss-cn-hangzhou.aliyuncs.com/farm3.png'></image>
       </swiper-item>
     <!-- </block> -->
   </swiper>
@@ -84,16 +84,13 @@
   <!-- 商品详情 -->
   <view class="prod-detail">
     <view>
-      <image src="https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/detail_f.jpg" mode="widthFix"></image>
+      <image src="https://green-farm-demo.oss-cn-hangzhou.aliyuncs.com/farm_detail_1.png" mode="widthFix"></image>
     </view>
     <view>
-      <image src="https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/detail_0.jpg" mode="widthFix"></image>
+      <image src="https://green-farm-demo.oss-cn-hangzhou.aliyuncs.com/farm_detail_2.png" mode="widthFix"></image>
     </view>
     <view>
-      <image src="https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/detail_3.jpg" mode="widthFix"></image>
-    </view>
-    <view>
-      <image src="https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/detail_1.jpg" mode="widthFix"></image>
+      <image src="https://green-farm-demo.oss-cn-hangzhou.aliyuncs.com/farm_detail_3.png" mode="widthFix"></image>
     </view>
     <view>
       <image src="https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/detail_2.jpg" mode="widthFix"></image>

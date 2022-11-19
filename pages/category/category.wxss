@@ -77,7 +77,7 @@ page {
 
 .leftmenu {
   width: 200rpx;
-  height: 27%;
+  height: 36%;
   box-sizing: border-box;
   background-color: #9bb496;
   overflow: scroll;

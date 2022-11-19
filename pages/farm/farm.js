@@ -1,5 +1,4 @@
 // pages/farm/farm.js
-import farmApi from "../../api/farm"
 // 引入SDK核心类，js文件根据自己业务，位置可自行放置
 const QQMapWX = require('../../utils/qqmap-wx-jssdk.min.js');
 const key = 'E57BZ-OOY3W-ZLZR3-OWD7S-CYKEK-BRB6E'
@@ -12,20 +11,20 @@ Page({
   data: {
     latitude: 0,
     longitude: 0,
-    markers: [
-      {id: 1, title: '秋名山农场', latitude: 31.768095, longitude: 104.757343, iconPath: '../../images/map/farm.png', width: '55rpx', height: '69rpx'},
-      {id: 2, title: '七里香农场', latitude: 31.762937, longitude: 104.750085, iconPath: '../../images/map/farm.png', width: '55rpx', height: '69rpx'},
-      {id: 3, title: '蒲公英农场', latitude: 31.761218, longitude: 104.740527, iconPath: '../../images/map/farm.png', width: '55rpx', height: '69rpx'},
-      {id: 4, title: '半岛农场', latitude: 31.752314, longitude: 104.743114, iconPath: '../../images/map/farm.png', width: '55rpx', height: '69rpx'},
-      {id: 5, title: '彩虹农场', latitude: 27.708482, longitude: 113.145435, iconPath: '../../images/map/farm.png', width: '55rpx', height: '69rpx'},
-      {id: 6, title: '西元前农场', latitude: 27.708482, longitude: 113.145435, iconPath: '../../images/map/farm.png', width: '55rpx', height: '69rpx'},
-      {id: 7, title: '晴天农场', latitude: 27.708482, longitude: 113.145435, iconPath: '../../images/map/farm.png', width: '55rpx', height: '69rpx'},
-      {id: 8, title: '断弦农场', latitude: 27.708482, longitude: 113.145435, iconPath: '../../images/map/farm.png', width: '55rpx', height: '69rpx'},
+    farmList: [
+      {id: 1, name: '七里香农场', latitude: 28.140072, longitude: 112.990552, address: '梅岭村1栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.2'},
+      {id: 2, name: '秋名山农场', latitude: 25.140072, longitude: 110.990552, address: '梅岭村2栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.5'},
+      {id: 3, name: '蒲公英农场', latitude: 22.140072, longitude: 102.990552, address: '梅岭村3栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'0.8'},
+      {id: 4, name: '半岛农场', latitude: 18.140072, longitude: 100.990552, address: '梅岭村4栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'2.3'},
+      {id: 5, name: '彩虹农场', latitude: 28.140072, longitude: 120.990552, address: '梅岭村5栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.6'},
+      {id: 6, name: '西元前农场', latitude: 35.140072, longitude: 125.990552, address: '梅岭村6栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'3.5'},
+      {id: 7, name: '晴天农场', latitude: 28.140072, longitude: 114.990552, address: '梅岭村7栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'2.7'},
+      {id: 8, name: '断弦农场', latitude: 26.140072, longitude: 112.990552, address: '梅岭村8栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.1'},
     ],
     changeTabs:0,
     showView: true,
 
-    farmList: [],
+//    farmList: [],
     dict: {
       'OPENING': '营业中',
       'CLOSED': '已关门'
@@ -66,7 +65,7 @@ Page({
     this.initMapSdk()
     this.loadCurrentLocation()
     this.initMapContext()
-    this.fetchFarmList()
+//    this.fetchFarmList()
     
   },
   initMapSdk() {
@@ -74,6 +73,7 @@ Page({
   },
 
   //获取农场列表
+  /*
   fetchFarmList() {
     farmApi.list().then(res=>{
       // const farmList = makeFarmList(res.data)
@@ -82,6 +82,8 @@ Page({
       })
     })
   },
+  */
+  
 
   //导航功能（去这里）
   navigateLocation(e) {
@@ -165,7 +167,7 @@ Page({
         latitude,
         longitude
       })
-      this.fetchFarmList();
+//      this.fetchFarmList();
     }
 
   },

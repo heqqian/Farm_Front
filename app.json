@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/farm/farm",
     "pages/index/index",
     "pages/logs/logs",
     "pages/user/user",
-    "pages/farm/farm",
     "pages/category/category",
     "pages/basket/basket",
     "pages/search-page/search-page",
@@ -55,16 +55,16 @@
     "color": "#b8b8b8",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "images/tabbar/home.png",
-        "selectedIconPath": "images/tabbar/home-sel.png"
-      },
-      {
         "pagePath": "pages/farm/farm",
-        "text": "农场",
+        "text": "首页",
         "iconPath": "images/tabbar/farm.png",
         "selectedIconPath": "images/tabbar/farm-sel.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "商品",
+        "iconPath": "images/tabbar/home.png",
+        "selectedIconPath": "images/tabbar/home-sel.png"
       },
       {
         "pagePath": "pages/basket/basket",
