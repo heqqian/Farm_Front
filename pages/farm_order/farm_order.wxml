@@ -2,30 +2,6 @@
 <!--pages/submit-order/submit-order.wxml-->
 <view class='container'>
   <view class='submit-order'>
-    <!-- 收货地址 -->
-    <view class='delivery-addr ' bindtap='toAddrListPage'>
-      <view class='addr-bg ' wx:if="{{!userAddr}}">
-        <view class='add-addr'>
-          <view class='plus-sign-img'>
-            <image src='../../images/icon/plus-sign.png'></image>
-          </view>
-          <text>新增收货地址</text>
-        </view>
-        <view class='arrow empty'></view>
-      </view>
-      <view class='addr-bg whole' wx:if="{{userAddr}}">
-        <view class='addr-icon'>
-          <image src='../../images/icon/addr.png'></image>
-        </view>
-        <view class='user-info'>
-          <text class='item'>{{userAddr.receiver}}</text>
-          <text class='item'>{{userAddr.mobile}}</text>
-        </view>
-        <view class='addr'>{{userAddr.province}}{{userAddr.city}}{{userAddr.area}}{{userAddr.addr}}</view>
-        <view class='arrow'></view>
-      </view>
-    </view>
-
     <!-- 商品详情 -->
     <view class='prod-item'>
       <block>
@@ -37,7 +13,7 @@
             <view class='prodname'>
               七里香农场
             </view>
-            <view class='prod-info-cont'>全国独一无二的音乐农场，</view>
+            <view class='prod-info-cont'>休闲旅游农业 一站式体验</view>
             <view class='price-nums'>
               <text class='prodprice'><text class='symbol'>￥</text>
               <text class='big-num'>{{wxs.parsePrice(168.00)[0]}}</text>
@@ -86,11 +62,15 @@
           </view>
         </view>
         <view class='item'>
-          <view class='item-tit'>运费：</view>
+          <view class='item-tit'>预约时间：</view>
           <view class='item-txt price'>
-            <text class='symbol'>￥</text>
-            <text class='big-num'>{{wxs.parsePrice(transfee)[0]}}</text>
-            <text class='small-num'>.{{wxs.parsePrice(transfee)[1]}}</text>
+            <text class='small-num'>8:00~12:00</text>
+          </view>
+        </view>
+        <view class='item'>
+          <view class='item-tit'>预约项目：</view>
+          <view class='item-txt price'>
+            <text class='small-num'>采摘 垂钓</text>
           </view>
         </view>
         <view class='item'>

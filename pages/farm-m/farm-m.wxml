@@ -1,4 +1,4 @@
 <!--pages/farm-m/farm-m.wxml-->
-<!-- <text>你还没有租赁农场哦，快去看看有没有心仪的吧</text> -->
+<!-- <text>你还没有预约农场哦，快去看看有没有心仪的吧</text> -->
 <web-view>
 </web-view>

@@ -110,8 +110,9 @@ page {
 
 .prod-item {
   background-color: #fff;
-  margin-top: 15rpx;
+  margin: 15rpx;
   font-size: 28rpx;
+  border:7rpx solid #9bb496;
 }
 
 .prod-item .item-cont .prod-pic image {
@@ -251,9 +252,10 @@ page {
 
 .order-msg {
   background: #fff;
-  margin-top: 15rpx;
+  margin: 15rpx;
   padding: 0 30rpx;
   font-size: 28rpx;
+  border:7rpx solid #9bb496;
 }
 
 .order-msg .msg-item {

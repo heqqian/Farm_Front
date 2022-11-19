@@ -29,14 +29,25 @@
     </view>
     <view class="sales-p">{{brief}}</view>
     <view class="prod-price">
-      <text class="price">￥<text class="price-num">168 / 月</text><view class="99"></view></text>
+      <text class="price">￥<text class="price-num">168</text><view class="99"></view></text>
       <text class="sales"></text>
     </view>
   </view>
-  <!-- 已选规格 -->
+  <!-- 小贴士 -->
   <view class="sku" bindtap='showSku'>
-    <view class="sku-tit">已选</view>
-    <view class="sku-con">1 块地</view>
+    <view class="sku-tit">
+      <text>温馨小贴士</text>
+      <text>\n</text>
+    </view>
+    <view class="sku-con">
+      <text>今日温度：80℃</text>
+      <text>\n</text>
+      <text>今日湿度：81%</text>
+      <text>\n</text>
+      <text>空气质量：130</text>
+      <text>\n</text>
+      <text>适宜项目：采摘 垂钓 野炊</text>
+    </view>
     <view class="more">...</view>
   </view>
   <!-- 评价 -->
@@ -90,10 +101,13 @@
       <image src="https://green-farm-demo.oss-cn-hangzhou.aliyuncs.com/farm_detail_2.png" mode="widthFix"></image>
     </view>
     <view>
+      <image src="https://green-farm-demo.oss-cn-hangzhou.aliyuncs.com/farm_detail_4.png" mode="widthFix"></image>
+    </view>
+    <view>
       <image src="https://green-farm-demo.oss-cn-hangzhou.aliyuncs.com/farm_detail_3.png" mode="widthFix"></image>
     </view>
     <view>
-      <image src="https://ressmatthew-picture-cloud-storage.oss-cn-hangzhou.aliyuncs.com/img/detail_2.jpg" mode="widthFix"></image>
+      <image src="https://green-farm-demo.oss-cn-hangzhou.aliyuncs.com/farm_detail_6.png" mode="widthFix"></image>
     </view>
   </view>
   <!-- end 商品详情 -->
@@ -112,7 +126,7 @@
         <text>在线咨询</text>
     </view>
     <view style="background-color: rgb(37, 168, 124);" class="btn buy" bindtap='rentNow'>
-      <text>立即租赁</text>
+      <text>立即预约</text>
     </view>
   </view>
 

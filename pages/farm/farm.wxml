@@ -4,7 +4,8 @@
     <input class="search" placeholder="搜索农场" type="text" bindtap="goToFarmSearch" />
   </view>
 
-  <map
+  <view class="myView">
+    <map
   id="store-map"
   class="store-map" style="height: {{ collapse ? '0' : '520rpx' }};" latitude="{{ latitude }}" longitude="{{ longitude }}" show-location  show-compass>
   <image class="current-icon" src="../../images/map/origin.png" bindtap="goToCurrentLocation"></image>
@@ -13,6 +14,8 @@
   <view class="collapse-area" bindtap="collapse">
   {{ collapse ? '展开地图' : '收起地图' }}
   </view>
+  </view>
+  
       
   <!--全部农场列表-->
   <scroll-view class="{{ showView?'store-list':'store-list_hide' }}" style="height:calc(100vh - {{mapShow? 700 : 180}}rpx)" scroll-y >
@@ -41,7 +44,7 @@
 
   <!--我的农场-->
   <scroll-view class="{{ showView?'store-list_hide':'store-list' }}" style="height:calc(100vh - {{mapShow? 700 : 180}}rpx)" scroll-y >
-    <!--秋名山农场-->>
+    <!--秋名山农场-->
     <view class="store-box">
       <view class="info-area" bindtap="toMine">
         <view class="name">秋名山农场</view>

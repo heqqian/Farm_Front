@@ -15,7 +15,8 @@
   padding: 0 26rpx;
   box-sizing: border-box;
   font-size: 28rpx;
-  color: #d1d1d1;
+  color: #fff;
+  border:7rpx solid #9bb496;
 }
 
 .store-map {
@@ -30,6 +31,11 @@
   position: absolute;
   right: 18rpx;
   bottom: 22rpx;
+}
+
+.myView{
+  margin: 10rpx;
+  border:7rpx solid #9bb496;
 }
 
 .collapse-area {
@@ -67,6 +73,7 @@
   align-items: center;
   box-shadow: 0 4px 10px 0 rgba(83, 83, 83, 0.288);
   border-radius: 20rpx;
+  border:7rpx solid #9bb496;
 }
 .store-list .store-box .info-area {
   flex: 1;
