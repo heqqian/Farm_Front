@@ -1,7 +1,7 @@
 <view class="page">
   <view class="header">
-    <tabs bind:change="change2" tabs="{{ [{value: 'nearby', label:'附近农场'}, {value:'mine', label:'我的农场'}] }}"></tabs>
-    <input class="search" placeholder="搜索农场" type="text" bindtap="goToFarmSearch" />
+    <tabs bind:change="change2" tabs="{{ [{value: 'nearby', label:'附近农庄'}, {value:'mine', label:'预约农庄'}] }}"></tabs>
+    <input class="search" placeholder="搜索农庄" type="text" bindtap="goToFarmSearch" />
   </view>
 
   <view class="myView">
@@ -17,7 +17,7 @@
   </view>
   
       
-  <!--全部农场列表-->
+  <!--全部农庄列表-->
   <scroll-view class="{{ showView?'store-list':'store-list_hide' }}" style="height:calc(100vh - {{mapShow? 700 : 180}}rpx)" scroll-y >
     <view wx:for="{{ farmList }}" wx:key="index" class="store-box">
       <view class="info-area" bindtap="toDetail">
@@ -42,13 +42,13 @@
     </view>
   </scroll-view>
 
-  <!--我的农场-->
+  <!--预约农庄-->
   <scroll-view class="{{ showView?'store-list_hide':'store-list' }}" style="height:calc(100vh - {{mapShow? 700 : 180}}rpx)" scroll-y >
-    <!--秋名山农场-->
+    <!--秋名山农庄-->
     <view class="store-box">
       <view class="info-area" bindtap="toMine">
-        <view class="name">秋名山农场</view>
-        <view class="info">咕咕区噜噜街道16号</view>
+        <view class="name">秋名山农庄</view>
+        <view class="info">梅岭村1栋</view>
         <view class="info">营业时间：08:00~22:00 </view>
         <view class="tag">营业中</view>
       </view>
@@ -66,11 +66,11 @@
         </view>
       </view>
     </view>
-    <!--七里香农场-->
+    <!--七里香农庄-->
     <view class="store-box">
       <view class="info-area" bindtap="toMine">
-        <view class="name">七里香农场</view>
-        <view class="info">咕咕区噜噜街道17号</view>
+        <view class="name">七里香农庄</view>
+        <view class="info">梅岭村2栋</view>
         <view class="info">营业时间：08:00~22:00 </view>
         <view class="tag">营业中</view>
       </view>

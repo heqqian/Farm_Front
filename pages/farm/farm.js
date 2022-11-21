@@ -12,14 +12,14 @@ Page({
     latitude: 0,
     longitude: 0,
     farmList: [
-      {id: 1, name: '七里香农场', latitude: 28.140072, longitude: 112.990552, address: '梅岭村1栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.2'},
-      {id: 2, name: '秋名山农场', latitude: 25.140072, longitude: 110.990552, address: '梅岭村2栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.5'},
-      {id: 3, name: '蒲公英农场', latitude: 22.140072, longitude: 102.990552, address: '梅岭村3栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'0.8'},
-      {id: 4, name: '半岛农场', latitude: 18.140072, longitude: 100.990552, address: '梅岭村4栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'2.3'},
-      {id: 5, name: '彩虹农场', latitude: 28.140072, longitude: 120.990552, address: '梅岭村5栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.6'},
-      {id: 6, name: '西元前农场', latitude: 35.140072, longitude: 125.990552, address: '梅岭村6栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'3.5'},
-      {id: 7, name: '晴天农场', latitude: 28.140072, longitude: 114.990552, address: '梅岭村7栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'2.7'},
-      {id: 8, name: '断弦农场', latitude: 26.140072, longitude: 112.990552, address: '梅岭村8栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.1'},
+      {id: 1, name: '七里香农庄', latitude: 28.140072, longitude: 112.990552, address: '梅岭村1栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.2'},
+      {id: 2, name: '秋名山农庄', latitude: 25.140072, longitude: 110.990552, address: '梅岭村2栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.5'},
+      {id: 3, name: '蒲公英农庄', latitude: 22.140072, longitude: 102.990552, address: '梅岭村3栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'0.8'},
+      {id: 4, name: '半岛农庄', latitude: 18.140072, longitude: 100.990552, address: '梅岭村4栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'2.3'},
+      {id: 5, name: '彩虹农庄', latitude: 28.140072, longitude: 120.990552, address: '梅岭村5栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.6'},
+      {id: 6, name: '西元前农庄', latitude: 35.140072, longitude: 125.990552, address: '梅岭村6栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'3.5'},
+      {id: 7, name: '晴天农庄', latitude: 28.140072, longitude: 114.990552, address: '梅岭村7栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'2.7'},
+      {id: 8, name: '断弦农庄', latitude: 26.140072, longitude: 112.990552, address: '梅岭村8栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.1'},
     ],
     changeTabs:0,
     showView: true,
@@ -72,7 +72,7 @@ Page({
     this.mapSdk = new QQMapWX({key})
   },
 
-  //获取农场列表
+  //获取农庄列表
   /*
   fetchFarmList() {
     farmApi.list().then(res=>{
@@ -130,7 +130,7 @@ Page({
     this.mapContext.moveToLocation()
   },
 
-  //搜索农场
+  //搜索农庄
   goToFarmSearch() {
     // wx.navigateTo({
     //   url: '/pages/farm_s/farm_s',

@@ -14,7 +14,7 @@
 <!--搜索框-->
 <van-search
   value="{{ value }}"
-  placeholder="搜索农场"
+  placeholder="搜索农庄"
   bind:search="onSearch"
   shape="round"
   background="#8ab186"
