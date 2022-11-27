@@ -25,7 +25,7 @@ Page({
   },
   toIndex: function () {
     wx.switchTab({
-      url: '/pages/index/index'
+      url: '/pages/farm/farm'
     })
   },
   payAgain: function () {

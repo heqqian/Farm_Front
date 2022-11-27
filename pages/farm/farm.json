@@ -2,5 +2,5 @@
   "usingComponents": {
     "tabs": "../../components/tabs/tabs"
   },
-  "navigationBarTitleText": "农庄列表"
+  "navigationBarTitleText": "首页"
 }

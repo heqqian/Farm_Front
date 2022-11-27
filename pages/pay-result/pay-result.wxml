@@ -13,7 +13,7 @@
     <view class='tips'>感谢您的购买</view>
     <view class="btns">
       <text class='button checkorder' bindtap='toOrderList'>查看订单</text>
-      <text class='button shopcontinue' bindtap='toIndex'>继续购物</text>
+      <text class='button shopcontinue' bindtap='toIndex'>返回首页</text>
     </view>
   </view>
 

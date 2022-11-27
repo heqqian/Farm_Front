@@ -28,7 +28,9 @@
     "pages/com-success/com-seccess",
     "pages/comment/comment",
     "pages/farm_rent/farm_rent",
-    "pages/farm_order/farm_order"
+    "pages/farm_order/farm_order",
+    "pages/hotel/hotel",
+    "pages/hotel_order/hotel_order"
   ],
   "permission": {
     "scope.userLocation": {

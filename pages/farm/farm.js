@@ -16,10 +16,16 @@ Page({
       {id: 2, name: '秋名山农庄', latitude: 25.140072, longitude: 110.990552, address: '梅岭村2栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.5'},
       {id: 3, name: '蒲公英农庄', latitude: 22.140072, longitude: 102.990552, address: '梅岭村3栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'0.8'},
       {id: 4, name: '半岛农庄', latitude: 18.140072, longitude: 100.990552, address: '梅岭村4栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'2.3'},
-      {id: 5, name: '彩虹农庄', latitude: 28.140072, longitude: 120.990552, address: '梅岭村5栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.6'},
-      {id: 6, name: '西元前农庄', latitude: 35.140072, longitude: 125.990552, address: '梅岭村6栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'3.5'},
-      {id: 7, name: '晴天农庄', latitude: 28.140072, longitude: 114.990552, address: '梅岭村7栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'2.7'},
-      {id: 8, name: '断弦农庄', latitude: 26.140072, longitude: 112.990552, address: '梅岭村8栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.1'},
+      {id: 5, name: '断弦农庄', latitude: 28.140072, longitude: 120.990552, address: '梅岭村5栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'1.6'},
+      {id: 6, name: '西元前农庄', latitude: 35.140072, longitude: 125.990552, address: '梅岭村6栋', opening_time: '08:00~22:00', status: 'OPENING',distance:'3.5'}
+    ],
+    hotelList:[
+      {id:1,name:'威廉古堡',latitude: 25.140072, longitude: 108.990552, detail: '华丽烛台 摇曳灯火 欧式复古风',  status: 'OPENING',distance:'1.2'},
+      {id:2,name:'禾栖民宿',latitude: 20140072, longitude: 100.990552, detail: '独立超大落地窗 竹景大床房',  status: 'OPENING',distance:'2.8'},
+      {id:3,name:'三十六季客栈',latitude: 25.140072, longitude: 90.990552, detail: '幽静天窗 禅意空间 温馨一居',status: 'OPENING',distance:'0.9'},
+      {id:4,name:'丹丘里民宿',latitude: 20.140072, longitude: 89.990552, detail: '大浴缸 星空房 落地窗',status: 'OPENING',distance:'3.6'},
+      {id:5,name:'夕霞小筑',latitude: 25.140072, longitude: 98.990552, detail: '现代风 高品质 简约灰白风',status: 'OPENING',distance:'2.4'},
+      {id:6,name:'觅屿民宿',latitude: 29.140072, longitude: 120.990552, detail: '日式榻榻米 清新度假居所',status: 'OPENING',distance:'1.8'}
     ],
     changeTabs:0,
     showView: true,
@@ -97,6 +103,11 @@ Page({
   toDetail() {
     wx.navigateTo({
       url: '/pages/farm-detail/farm-detail',
+    })
+  },
+  toHotelDetail() {
+    wx.navigateTo({
+      url: '/pages/hotel/hotel',
     })
   },
   collapse() {

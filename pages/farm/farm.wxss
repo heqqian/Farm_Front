@@ -91,10 +91,11 @@
 }
 .store-list .store-box .info-area .tag {
   display: inline-block;
-  background-color: #30cf08;
+  background-color: #9bb496;
   font-size: 18rpx;
   color: #fff;
-  padding: 6rpx;
+  border-radius: 10rpx;
+  padding: 8rpx 12rpx;
 }
 .store-list .store-box .location-area {
   height: 100%;
