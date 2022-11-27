@@ -4,9 +4,6 @@
   <swiper indicator-dots="true" autoplay="true" indicator-color="#f2f2f2" interval="3000" duration="1000" indicator-active-color="#eb2444">
     <!-- <block wx:for="{{imgs}}" wx:key='*this'> -->
       <swiper-item>
-        <image src='https://green-farm-demo.oss-cn-hangzhou.aliyuncs.com/hotel_1.png'></image>
-      </swiper-item>
-      <swiper-item>
         <image src='https://green-farm-demo.oss-cn-hangzhou.aliyuncs.com/hotel_2.png'></image>
       </swiper-item>
       <swiper-item>
