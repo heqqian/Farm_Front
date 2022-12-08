@@ -23,27 +23,21 @@
     <!-- end swiper -->
 
     <view class='cat-item'>
-      <view class='item' bindtap='toClassifyPage' data-sts="1">
-        <image src='../../images/icon/newProd.png'></image>
-        <text>新品推荐</text>
+      <view class='item' bindtap='toFarmPage' data-sts="1">
+        <image src='../../images/icon/neweveryday.png'></image>
+        <text>乡游景点</text>
       </view>
-      <!--
-      <view class='item' bindtap='toLimitedTimeOffer' data-sts="2">
-        <image src='../../images/icon/timePrice.png'></image>
-        <text>限时特惠</text>
-      </view>
-      -->
-      <view class='item' bindtap='toCategoryPage' data-sts="2">
-        <image src='../../images/icon/category.png'></image>
-        <text>商品分类</text>
+      <view class='item' bindtap='toHotelPage' data-sts="2">
+        <image src='../../images/icon/buiding.png'></image>
+        <text>酒店民宿</text>
       </view>
       <view class='item' bindtap='toClassifyPage' data-sts="3">
-        <image src='../../images/icon/neweveryday.png'></image>
-        <text>每日疯抢</text>
+        <image src='../../images/icon/category.png'></image>
+        <text>特色产品</text>
       </view>
       <view class='item' bindtap='toCouponCenter'>
-        <image src='../../images/icon/newprods.png'></image>
-        <text>领优惠券</text>
+        <image src='../../images/icon/vr.png'></image>
+        <text>VR识别</text>
       </view>
     </view>
 

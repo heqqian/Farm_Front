@@ -1,0 +1,32 @@
+<view class="myView">
+    <map
+  id="store-map"
+  class="store-map" style="height: {{ collapse ? '0' : '520rpx' }};" latitude="{{ latitude }}" longitude="{{ longitude }}" show-location  show-compass>
+  <image class="current-icon" src="../../images/map/origin.png" bindtap="goToCurrentLocation"></image>
+  </map>
+
+  <!--全部民宿列表-->
+  <scroll-view class="{{ 'store-list' }}" style="height:calc(100vh - {{mapShow? 700 : 180}}rpx)" scroll-y >
+    <view wx:for="{{ hotelList }}" wx:key="index" class="store-box">
+      <view class="info-area" bindtap="toHotelDetail">
+        <view class="name">{{ item.name }}</view>
+        <view class="info">{{ item.detail }}</view>
+        <view class="tag">{{ dict[item.status] }}</view>
+      </view>
+
+      <view class="location-area">
+        <view class="distance">距离{{ item.distance }}km</view>
+        <view class="action-area">
+          <button class="btn_talk" plain="true" bindtap="navigateLocation" data-latitude="{{ item.latitude }}" data-longitude="{{ item.longitude }}">
+            <image class="location"  src="../../images/map/bl.png"></image>
+          </button>
+          <button class="btn_talk" plain="true" bindtap="" open-type="contact">
+            <image class="talk" src="../../images/map/talk.png">
+            </image>
+          </button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+</view>

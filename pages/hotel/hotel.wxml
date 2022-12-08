@@ -89,6 +89,11 @@
   </view>
   <!-- end 商品详情 -->
 
+  <!--3D按钮-->
+  <image id="3D" src="../../images/3D.png" 
+  style=" height: 80rpx; width: 55%;margin-left: 20rpx;border: 2px solid;box-shadow: 0 4px 10px 0 rgba(83, 83, 83, 0.288);">
+  </image>
+
   <!-- 底部按钮 -->
   <view class="cart-footer">
     <view class="btn icon" bindtap='toHomePage'>

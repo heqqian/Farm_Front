@@ -58,14 +58,9 @@ Page({
     })
   },
 
-  //跳转商品活动页面
-  toClassifyPage: function(e) {
-    var url = '/pages/prod-classify/prod-classify?sts=' + e.currentTarget.dataset.sts;
-    var id = e.currentTarget.dataset.id;
-    var title = e.currentTarget.dataset.title;
-    if (id) {
-      url += "&tagid=" + id + "&title=" + title;
-    }
+  //跳转农庄页面
+  toFarmPage: function(e) {
+    var url = '/pages/farm_index/farm_index';
     wx.navigateTo({
       url: url
     })
@@ -79,8 +74,14 @@ Page({
     })
   },
 
-  //跳转商品分类页面
-  toCategoryPage:function(){
+  //跳转酒店页面
+  toHotelPage:function(){
+    wx.navigateTo({
+      url: '/pages/hotel_index/hotel_index',
+    })
+  },
+
+  toClassifyPage:function(){
     wx.navigateTo({
       url: '/pages/category/category',
     })

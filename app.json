@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/farm/farm",
     "pages/index/index",
+    "pages/farm/farm",
     "pages/logs/logs",
     "pages/user/user",
     "pages/category/category",
@@ -30,7 +30,9 @@
     "pages/farm_rent/farm_rent",
     "pages/farm_order/farm_order",
     "pages/hotel/hotel",
-    "pages/hotel_order/hotel_order"
+    "pages/hotel_order/hotel_order",
+    "pages/hotel_index/hotel_index",
+    "pages/farm_index/farm_index"
   ],
   "permission": {
     "scope.userLocation": {
@@ -57,16 +59,16 @@
     "color": "#b8b8b8",
     "list": [
       {
-        "pagePath": "pages/farm/farm",
-        "text": "首页",
-        "iconPath": "images/tabbar/farm.png",
-        "selectedIconPath": "images/tabbar/farm-sel.png"
-      },
-      {
         "pagePath": "pages/index/index",
-        "text": "商品",
+        "text": "首页",
         "iconPath": "images/tabbar/home.png",
         "selectedIconPath": "images/tabbar/home-sel.png"
+      },
+      {
+        "pagePath": "pages/farm/farm",
+        "text": "农庄",
+        "iconPath": "images/tabbar/farm.png",
+        "selectedIconPath": "images/tabbar/farm-sel.png"
       },
       {
         "pagePath": "pages/basket/basket",
