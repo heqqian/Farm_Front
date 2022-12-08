@@ -1,0 +1,7 @@
+<!--pages/live2d-view/live2d-view.wxml-->
+<view>
+  <web-view src="http://39.101.65.61/dist/view/index.html">
+  </web-view>
+  <!-- <web-view src="https://www.bilibili.com/">
+  </web-view> -->
+</view>

@@ -32,7 +32,8 @@
     "pages/hotel/hotel",
     "pages/hotel_order/hotel_order",
     "pages/hotel_index/hotel_index",
-    "pages/farm_index/farm_index"
+    "pages/farm_index/farm_index",
+    "pages/live2d-view/live2d-view"
   ],
   "permission": {
     "scope.userLocation": {

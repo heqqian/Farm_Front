@@ -3,6 +3,11 @@ var http = require("../../utils/http.js");
 // var config = require("../../utils/config.js");
 const Big = require("../../utils/big.min.js");
 
+// const live2D = require("../../libs/live2d-widget/autoload.js")
+// var WxParse = require("../../utils/wxParse/wxParse.js");
+// const live2D1 = require("../../libs/live2d/waifu-tips.js")
+// const live2D2 = require("../../libs/live2d/live2d.js")
+
 Page({
 
   /**
@@ -14,13 +19,16 @@ Page({
     finalMoney: 0,
     totalMoney: 0,
     subtractMoney: 0,
-    allChecked: false
+    allChecked: false,
+    html: '<div class="waifu"><div class="waifu-tips"></div><canvas id="live2d" width="280" height="250" class="live2d"></canvas></div>'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // var content = '<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script><div>我是HTML代码</div>';
+    // WxParse.wxParse('article', 'html', content, this, 0); // 实例化对象
 
   },
 

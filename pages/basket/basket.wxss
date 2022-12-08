@@ -1,5 +1,5 @@
 /* pages/basket/basket.wxss */
-
+/* @import "../../utils/wxParse/wxParse.wxss"; */
 page {
   width: 100%;
   background: #f4f4f4;
