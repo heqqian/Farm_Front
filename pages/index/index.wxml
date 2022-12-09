@@ -135,7 +135,11 @@
 
     <text>\n</text>
 
-    <view class="btn_Suspension" bindtap="btn_Suspension_click" catchtouchmove="buttonMove" bindtouchstart="buttonStart" bindtouchend="buttonEnd" style="top: {{buttonTop}}px; left: {{buttonLeft}}px; background-color: #ffffff">
+    <!--
+     < view class="btn_Suspension" bindtap="btn_Suspension_click" catchtouchmove="buttonMove" bindtouchstart="buttonStart" bindtouchend="buttonEnd" style="top: {{buttonTop}}px; left: {{buttonLeft}}px; background-color: #ffffff">
+    -->
+    
+    <view class="btn_Suspension" bindtap="btn_Suspension_click"style="top: {{buttonTop}}px; left: {{buttonLeft}}px; background-color: #ffffff">
     <image class="Suspension_logo" src="../../images/live2D.png" style="position: absolute; left: 0rpx; top: 0rpx"></image><!--这里是按钮图标，下载地址会在文章底部说明-->
     <view wx:if="{{corner_data==0}}"></view>
     <view wx:else>

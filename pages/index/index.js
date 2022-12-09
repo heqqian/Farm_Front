@@ -248,10 +248,13 @@ Page({
     wx.navigateTo({
       url: '/pages/live2d-view/live2d-view',
     })    
-  },
-  //以下是按钮拖动事件
+  }
+
+  /**
+   //以下是按钮拖动事件
   buttonStart: function (e) {
     startPoint = e.touches[0]//获取拖动开始点
+    print(startPoint)
   },
   buttonMove: function (e) {
     var endPoint = e.touches[e.touches.length - 1]//获取拖动结束点
@@ -280,5 +283,6 @@ Page({
     })
   },
   buttonEnd: function (e) {
-  }
+  } 
+   */
 })
