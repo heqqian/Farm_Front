@@ -70,6 +70,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "pages/live2d/live2d",
+          "pathName": "pages/live2d/live2d",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

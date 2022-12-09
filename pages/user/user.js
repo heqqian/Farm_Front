@@ -157,15 +157,5 @@ Page({
     wx.navigateTo({
       url: url
     })
-  },
-  /**
-   * live2d页面跳转
-   */
-  toLive2D: function() {
-    wx.navigateTo({
-      url: '/pages/live2d-view/live2d-view',
-    })
   }
-
-
 })

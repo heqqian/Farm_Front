@@ -9,6 +9,16 @@
     </view>
   </view>
 
+  <view class="btn_Suspension" bindtap="btn_Suspension_click" catchtouchmove="buttonMove" bindtouchstart="buttonStart" bindtouchend="buttonEnd" style="top:{{buttonTop}}px;left:{{buttonLeft}}px;">
+    <image class="Suspension_logo" src="../../images/live2D.png"></image><!--这里是按钮图标，下载地址会在文章底部说明-->
+    <view wx:if="{{corner_data==0}}"></view>
+    <view wx:else>
+      <view class="cornorMark">
+        <text>{{corner_data}}</text>
+      </view>
+    </view>
+  </view>
+
   <view class='content'>
     <!-- swiper -->
     <swiper autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{indicatorActiveColor}} " circular='true' class='pic-swiper' indicator-dots previous-margin='20rpx' next-margin='20rpx'>
@@ -125,6 +135,16 @@
 
     <text>\n</text>
 
+    <view class="btn_Suspension" bindtap="btn_Suspension_click" catchtouchmove="buttonMove" bindtouchstart="buttonStart" bindtouchend="buttonEnd" style="top: {{buttonTop}}px; left: {{buttonLeft}}px; background-color: #ffffff">
+    <image class="Suspension_logo" src="../../images/live2D.png" style="position: absolute; left: 0rpx; top: 0rpx"></image><!--这里是按钮图标，下载地址会在文章底部说明-->
+    <view wx:if="{{corner_data==0}}"></view>
+    <view wx:else>
+      <view class="cornorMark">
+        <text>{{corner_data}}</text>
+      </view>
+    </view>
+  </view>
+
     <!-- 更多宝贝 -->
     <view class='more-prod' wx:if="{{item.style==0}}">
       <view class='title'>{{item.title}}</view>
@@ -153,5 +173,6 @@
     </view>
   </block>
 </view>
+
 <text>\n</text>
 <wxs module="wxs" src="../../wxs/number.wxs" />
